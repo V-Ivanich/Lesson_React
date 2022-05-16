@@ -1,28 +1,33 @@
 
 import React from "react";
-import { Nav, Navbar, Button } from "react-bootstrap";
+import './navibar.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Nav, Navbar, Container} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
+
 function NaviBar() {
-  let mar = {marginLeft: '15px'}
-  let mar2 = {marginRight: '15px'}
   return (
   <>
-    <Navbar expand='md' bg='dark' variant='dark'>
-      <Navbar.Brand style={mar}>WebDev Blog</Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className='me-auto'>
-          <Nav.Link><Link to='/'>Home</Link></Nav.Link>
-          <Nav.Link><Link to='/users'>Users</Link></Nav.Link>
-          <Nav.Link><Link to='/about'>About</Link></Nav.Link>
-        </Nav>
-        <Nav style={mar2}>
-          <Button variant='primary' className='me-2'>Log In</Button>
-          <Button variant='primary'>Sing out</Button>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Container>
+   <Navbar.Brand>React-Lisson</Navbar.Brand>
+   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+   <Navbar.Collapse id="responsive-navbar-nav">
+
+     <Nav className="me-auto">
+       <Nav.Link><Link className="nones" to="/">Home</Link></Nav.Link>
+       <Nav.Link><Link className="nones" to="/users">Users</Link></Nav.Link>
+       <Nav.Link><Link className="nones" to="about">About</Link></Nav.Link>
+     </Nav>
+     <Nav>
+       <Nav.Link href="#">More deets</Nav.Link>
+       <Nav.Link href="#">Dank memes</Nav.Link>
+     </Nav>
+     
+   </Navbar.Collapse>
+  </Container>
+</Navbar>
   </>
 )}
 export default NaviBar;
