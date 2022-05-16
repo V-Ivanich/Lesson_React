@@ -1,25 +1,24 @@
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { Homepage } from './pages/Homepage';
+import { About } from './pages/Aboutpage';
+import { Blogpage } from './pages/Blogpage';
+import { Notfoundpage } from './pages/Notfoundpage';
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NaviBar from './Components/Navibar';
-import Home from './Home';
-import Users from './Users';
-import About from './About';
-
+import { Layout } from './components/Layout';
 
 function App() {
    return (
-     <>
-     
-    <Router>
-    <NaviBar />
-    <Routes>
-    <Route exact path='/' element={<Home />} />
-    <Route path='/users' element={<Users />} />
-    <Route path='/about' element={<About />} />
-    </Routes>
+    <>
 
-    </Router>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="about" element={<About />} />
+          <Route path="posts" element={<Blogpage />} />
+          <Route path="*" element={<Notfoundpage />} />
+        </Route>
+      </Routes>
     </>
   );
 }
