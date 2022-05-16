@@ -16,15 +16,18 @@ function NaviBar() {
    <Navbar.Collapse id="responsive-navbar-nav">
 
      <Nav className="me-auto">
-       <Nav.Link><Link className="nones" to="/">Home</Link></Nav.Link>
-       <Nav.Link><Link className="nones" to="/users">Users</Link></Nav.Link>
-       <Nav.Link><Link className="nones" to="about">About</Link></Nav.Link>
+       <Nav.Item>
+       <Nav.Link eventKey='/'>Home</Nav.Link>
+       </Nav.Item>
+      {/* <Link className="nones" to="/">Home</Link> */}
+      <Link className="nones" to="/users">Users</Link>
+      <Link className="nones" to="about">About</Link>
      </Nav>
      <Nav>
        <Nav.Link href="#">More deets</Nav.Link>
        <Nav.Link href="#">Dank memes</Nav.Link>
      </Nav>
-     
+
    </Navbar.Collapse>
   </Container>
 </Navbar>
