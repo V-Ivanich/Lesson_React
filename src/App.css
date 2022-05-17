@@ -1,13 +1,4 @@
-header {
-  background-color:rgb(19, 21, 33);
-  padding: 20px;
-  text-align: center;
-}
-.menu_color {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-}
-.menu_color:hover {
-  color: dodgerblue;
+* {
+  margin: 0;
+  padding: 0;
 }
